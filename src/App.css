@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.error {
+ color: red;
+ width: 100%;
+}
+
+.align-text {
+  text-align: center;
+}
+
+.rd-circle {
+  border-radius: 5%;
+}
+
+.feat-img{
+  max-width: 274px !important;
+}
+
+
+.footer_sec {
+  position: relative;
+    bottom: 0;
+    clear: both;
+    width: 100%;
+    height: auto;
+}

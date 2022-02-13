@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# React with wordpress
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WordPress Rest API is a huge step forward for frontend developers looking to combine the power of JavaScript tools like React.js with WordPress.
+
+This is exactly what I want to do with this demo of the WordPress REST API in the work. I'll try to find out if this is really a game-changer and to deconstruct the hype surrounding it.
+
+Over here WordPress as a backend, and WordPress REST API to feed data into Reactjs application.
 
 ## Available Scripts
 

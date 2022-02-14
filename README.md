@@ -1,74 +1,69 @@
+
 # React with wordpress
 
 WordPress Rest API is a huge step forward for frontend developers looking to combine the power of JavaScript tools like React.js with WordPress.
 
 This is exactly what I want to do with this demo of the WordPress REST API in the work. I'll try to find out if this is really a game-changer and to deconstruct the hype surrounding it.
 
-Over here WordPress as a backend, and WordPress REST API to feed data into Reactjs application.
+Over here i used WordPress as a backend, and WordPress REST API to feed data into Reactjs application.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+Insert gif or link to demo
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- You need to install and activate [JWT Authentication for WP REST API](https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/)
+- After that need to configure following things
 
-### `npm test`
+```bash
+RewriteEngine on
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+```
+- Add the following in your wp-config.php Wordpress file. You can add your own secret key.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');
+define('JWT_AUTH_CORS_ENABLE', true);
+```
+- Now you can make a request to `/wp-json/jwt-auth/v1/token` REST API provided by the plugin.
+- Once user is login then JWT Token will be send in the response.That will be used in furhter API request
+## Installation
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repo
+```bash
+git clone https://github.com/sohilchamadia8/React-with-wordpress.git
+```
+2. Install packages
+```bash
+npm i
+``` 
+3. Runs the application
+```bash
+npm start
+``` 
+## Configure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Add your wordPress siteUrl in `src/Appconfig.js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+export const Appconfig = {
+    siteUrl: '<wordpress project siteUrl>' 
+}
+```
 
-### `npm run eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Authentication with JWT ( Login Logout )
+- Handing WordPress REST API
+- CRUD operation using WordPress REST API
+- Creating Dashboard using React to perform CRUD operation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Sohil Chamadia](https://sohilchamadia8.wordpress.com/)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -9,7 +9,7 @@ Over here i used WordPress as a backend, and WordPress REST API to feed data int
 
 ## Demo
 ### Dashboard
-![Logo](https://github.com/sohilchamadia8/React-with-wordpress/blob/main/posts.gif)
+![Logo](https://github.com/sohilchamadia8/React-with-wordpress/blob/main/user_login.gif)
 
 ### Post
 ![Logo](https://github.com/sohilchamadia8/React-with-wordpress/blob/main/posts.gif)

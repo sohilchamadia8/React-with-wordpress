@@ -7,9 +7,12 @@ This is exactly what I want to do with this demo of the WordPress REST API in th
 
 Over here i used WordPress as a backend, and WordPress REST API to feed data into Reactjs application.
 
-## Demo
+# Demo
+## Dashboard
+![Logo](https://github.com/sohilchamadia8/React-with-wordpress/blob/main/user_login.gif)
 
-Insert gif or link to demo
+## Post
+![Logo](https://github.com/sohilchamadia8/React-with-wordpress/blob/main/posts.gif)
 
 
 ## Prerequisites
